@@ -5,9 +5,10 @@ import json
 import time
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
-
+log_file_name = "log.txt"
 file_name = "cars.json"
 telegram_token = os.getenv('telegram_token')
 chat_id = os.getenv('chat_id')
@@ -71,6 +72,11 @@ searchCarTypes = [
         "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/alfa-romeo/year_min---66/?price_min=8000&price_max=11000",
         "8 - 11 000, older than 2015, automatic"
     ),
+    SearchCarType(
+        "Honda Civic",
+        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/honda/honda-civic/gearbox---1/year_min---65/?price_min=8000&price_max=11000",
+        "8 - 11 000, older than 2014, automatic"
+    ),
 ]
 
 #Load existing cars information from the file
@@ -92,7 +98,7 @@ def send_message(car):
         telegram_msg = requests.get(f'https://api.telegram.org/bot{telegram_token}/sendPhoto?chat_id={chat_id}&caption={msg}&photo={img_uri}&parse_mode=html')
         saveCarToFile(car)
         time.sleep(delay)
-
+foundCarAmount = 0
 #Parse data
 for carType in searchCarTypes:
     #Request information about all types of specific car type
@@ -120,5 +126,9 @@ for carType in searchCarTypes:
         
         #Create object and transform it to a json structure
         carObj = Car(carType.model, carId, src, name, details, price, date, place, link)
-
+        foundCarAmount = foundCarAmount + 1
         send_message(carObj)
+
+log = f"{datetime.today()} | Found {foundCarAmount} cars"
+with open(log_file_name, 'a') as file:
+    file.write(log + "\n")
