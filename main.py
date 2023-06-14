@@ -38,44 +38,9 @@ class SearchCarType(object):
 #Defining search requests
 searchCarTypes = [
     SearchCarType(
-        "Mazda",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/mazda/gearbox---1/year_min---66/?price_min=6000&price_max=11000",
-        "6 000 - 11 000 EUR, older than 2015, automatic"
-    ),
-    SearchCarType(
-        "Golf",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/volkswagen/volkswagen-golf/gearbox---1/year_min---65/?price_min=8000&price_max=11000",
-        "8 000 - 11 000 EUR, older than 2014, automatic"
-    ),
-    SearchCarType(
-        "Kia Seed",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/kia/ceed/gearbox---1/year_min---66/?price_min=8000&price_max=11000",
-        "8 - 11 000 EUR, older than 2015, automatic"
-    ),
-    SearchCarType(
-        "Kia Rio",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/kia/rio/gearbox---1/year_min---66/?price_min=8000&price_max=11000",
-        "8 - 11 000 EUR, older than 2015, automatic"
-    ),
-    SearchCarType(
-        "Mini Cooper",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/mini/cooper/gearbox---1/year_min---61/?price_min=8000&price_max=11000",
-        "8 - 11 000 EUR, older than 2010, automatic"
-    ),
-    SearchCarType(
-        "Seat",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/seat/gearbox---1/year_min---66/?price_min=8000&price_max=11000",
-        "8 - 11 000 EUR, older than 2015, automatic"
-    ),
-    SearchCarType(
-        "Alfa Romeo",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/alfa-romeo/year_min---66/?price_min=8000&price_max=11000",
-        "8 - 11 000, older than 2015, automatic"
-    ),
-    SearchCarType(
-        "Honda Civic",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/honda/honda-civic/gearbox---1/year_min---65/?price_min=8000&price_max=11000",
-        "8 - 11 000, older than 2014, automatic"
+        "Volkswagen Eos",
+        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/volkswagen/eos/",
+        "Volkswagen Eos"
     ),
 ]
 
