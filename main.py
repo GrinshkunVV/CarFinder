@@ -39,8 +39,8 @@ class SearchCarType(object):
 searchCarTypes = [
     SearchCarType(
         "Volkswagen Eos",
-        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/volkswagen/eos/",
-        "Volkswagen Eos"
+        "https://www.bazaraki.com/car-motorbikes-boats-and-parts/cars-trucks-and-vans/volkswagen/eos/gearbox---1/",
+        "Volkswagen Eos, auto"
     ),
 ]
 
